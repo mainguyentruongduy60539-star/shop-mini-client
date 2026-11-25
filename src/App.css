@@ -212,3 +212,26 @@ main {
 .banner-btn:hover {
   background: #22c55e;
 }
+/* ---------- Trạng thái hết hàng ---------- */
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.out-of-stock {
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
