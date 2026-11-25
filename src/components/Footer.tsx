@@ -3,8 +3,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p>© {year} ShopMini · Bài tập môn Công nghệ lập trình hiện đại</p>
-        <p>Hotline: 1900 0000 · Email: hotro@shopmini.vn</p>
+        <p>© {year} DuySport Store · Chuyên giày đá banh chính hãng</p>
+        <p>Hotline: 1900 6868 · Email: cskh@duysport.vn</p>
       </div>
     </footer>
   );
