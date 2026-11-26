@@ -260,3 +260,7 @@ main {
     display: none;
   }
 }
+/* ---------- Lab 2: Khoảng cách giữa các khu sản phẩm ---------- */
+main section + section {
+  margin-top: 40px;
+}

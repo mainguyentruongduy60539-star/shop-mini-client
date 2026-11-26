@@ -4,9 +4,13 @@ import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
 import { products } from "./data/products";
+import { filterProducts } from "./utils/product";
 import "./App.css";
 
 function App() {
+  const budgetShoes = filterProducts(products, { maxPrice: 2000000, sort: "asc" });
+  const tfShoes = filterProducts(products, { category: "Đinh TF (Cỏ nhân tạo)" });
+
   return (
     <>
       <Header />
@@ -14,6 +18,8 @@ function App() {
         <Banner />
         <CategoryList items={products} />
         <ProductList title="Giày đá banh nổi bật" items={products} />
+        <ProductList title="Giày giá dưới 2.000.000 đ" items={budgetShoes} />
+        <ProductList title="Giày sân cỏ nhân tạo (Đinh TF)" items={tfShoes} />
       </main>
       <Footer />
     </>
