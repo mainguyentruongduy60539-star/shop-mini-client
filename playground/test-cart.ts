@@ -9,7 +9,12 @@ import {
 } from "../src/utils/cart.ts";
 import type { CartItem } from "../src/utils/cart.ts";
 import { formatPrice } from "../src/utils/format.ts";
-import { filterProducts, getCategories } from "../src/utils/product.ts";
+import {
+  filterProducts,
+  getCategories,
+  searchByPriceRange,
+  groupByCategory,
+} from "../src/utils/product.ts";
 
 let cart: CartItem[] = [];
 cart = addToCart(cart, products[0]);      // Nike Mercurial x1
@@ -32,3 +37,8 @@ console.log(
   "Tìm 'nike', tối đa 2 triệu:",
   filterProducts(products, { keyword: "nike", maxPrice: 2000000 }).map((p) => p.name)
 );
+console.log(
+  "Giá từ 1.5tr đến 2.5tr:",
+  searchByPriceRange(products, 1500000, 2500000).map((p) => p.name)
+);
+console.log("Số lượng theo danh mục:", groupByCategory(products));
